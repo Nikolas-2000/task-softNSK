@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import "variables";
+
+@import "header/header";
+@import "header/logo";
+@import "header/menu";
+
+@import "main/info/info-block";
+@import "main/info/uniqueness_list";
+@import "main/info/button";
+
+@import "main/order-making/order";
+@import "main/order-making/icon";
+@import "main/order-making/form";
+@import "main/order-making/select-menu";
+@import "main/order-making/range-slider";
+
+@import "footer/footer";
+
+@import "font/fonts";

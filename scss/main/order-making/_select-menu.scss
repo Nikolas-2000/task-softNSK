@@ -1,0 +1,120 @@
+.select-menu {
+    cursor: pointer;
+    grid-area: select;
+    position: relative;
+
+    &__header {
+        height: 48px;
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid #FFFFFF;
+        border-radius: 3px;
+        padding: 12px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        user-select: none;
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        color: #272733;
+        &-title {
+
+        }
+
+        &-arrow {
+            width: 20px;
+            height: 20px;
+            background-image: url("../image/icon/arrow_down.svg");
+        }
+
+        &.active {
+            color: white;
+            background-color: #3D4050;
+            border: 1px solid #3D4050;
+
+            .select-menu__header-arrow {
+                width: 20px;
+                height: 20px;
+                background-image: url("../image/icon/arrow_up.svg");
+            }
+        }
+    }
+
+    &__list {
+        position: absolute;
+        width: 100%;
+        height: 180px;
+        bottom: -180px;
+        display: none;
+        gap: 10px;
+        flex-direction: column;
+        background-color: #272733;
+        border: 1px solid #3D4050;
+        border-radius: 3px;
+        padding: 15px 10px 10px 10px;
+        list-style-type: none;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        scrollbar-width: 7px;
+        scrollbar-color: $COOLOR-REGULAR $COOLOR-REGULAR;
+
+        &.active {
+            display: flex;
+        }
+
+        &::-webkit-scrollbar {
+            width: 7px;
+            background: #3D4050;
+            border-radius: 3px;
+          }
+      
+        &::-webkit-scrollbar-thumb {
+            width: 7px;
+            height: 53px;
+            background: #3E9CDC;
+            border-radius: 3px;
+        }
+        
+        &-elem {
+            font-size: 18px;
+            color: white;
+            font-family: 'Lato';
+            font-style: normal;
+
+            &:hover {
+                cursor: pointer;
+                color:#42A9ED;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .select-menu {
+        &__header {
+            height: 40px;
+            font-size: 15px;
+
+            &-arrow {
+                width: 15px;
+                height: 15px;
+            }
+
+            &.active {
+                .select-menu__header-arrow {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+
+        &__list {
+            gap: 15px;
+            &-elem {
+                font-size: 15px;
+            }
+        }
+    }
+}

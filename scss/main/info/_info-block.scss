@@ -1,0 +1,96 @@
+.info-block {
+    height: 850px;
+    background: url("../image/main_bg.jpg") no-repeat center center / cover;
+
+    &__container {
+        max-width: 1172px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        padding-top: 203px;
+    }
+    &__greet {
+        width: 780px;
+        margin: 0;
+        padding: 0;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        text-transform: uppercase;
+        &-begin {
+            color: $COOLOR-REGULAR
+        }
+        &-body {
+            color: #000;
+        }
+        &-end {
+            color: $COOLOR-REGULAR;
+        }
+    }
+}
+  
+@media screen and (max-width: 1400px) {
+    .info-block{
+        &__container {    
+            max-width: 1000px;
+        }
+    }
+
+}
+@media screen and (max-width: 1200px) {
+    .info-block{
+        &__container {    
+            max-width: 900px;
+        }
+    }
+}
+  
+@media screen and (max-width: 992px) {
+    .info-block {
+        height: 800px;
+        &__container {    
+            max-width: 100%;
+            margin: 0 5vw;
+        }
+        &__greet {
+            font-size: 44px;
+            line-height: 50px;
+            width: 520px;
+        }
+    }
+}
+   
+@media screen and (max-width: 576px) {
+    .info-block {
+        height: 750px;
+        &__container {
+            padding-top: 153px;
+        }
+
+        &__greet {
+            font-size: 30px;
+            line-height: 30px;
+            width: 350px;
+        }
+    }
+}
+  
+@media screen and (max-width: 400px) {
+    .info-block {
+        &__greet {
+            width: 250px;
+        }
+    }
+}
+
+@media screen and (max-width: 310px) {
+    .info-block {
+        height: auto;
+        &__greet {
+            width: 250px;
+        }
+    }
+}

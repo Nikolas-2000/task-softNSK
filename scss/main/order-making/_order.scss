@@ -1,0 +1,112 @@
+.order {
+    background: url("../image/order-bg.png") no-repeat center center / cover;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: #272733;
+    position: relative;
+    &__container {
+        max-width: 1172px;
+        margin: 0 auto;
+        padding-top: 120px;
+        padding-bottom: 150px;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        &-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+    &__decor {
+        margin: 0;
+        padding: 0;
+        font-family: 'Lato', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 43px;
+        text-transform: uppercase;
+        text-align: center;
+        &-begin {
+            color: $COLOR-WHITE;
+        }
+        &-end {
+            color: $COOLOR-REGULAR;
+        }
+    }
+    &__info {
+        margin: 0;
+        padding: 0;
+        font-family: 'Lato', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #BBBBBB;
+    }
+}
+  
+@media screen and (max-width: 1400px) {
+    .order {    
+        &__container {
+            max-width: 1000px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .order {    
+        &__container {
+            max-width: 900px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .order {    
+        &__container {
+            max-width: 100%;
+            margin: 0 5vw;
+        }
+    }
+}
+    
+@media screen and (max-width: 768px) {
+    .order {    
+        &__container {
+            padding-top: 80px;
+            &-text {
+                gap: 15px;
+            }
+        }
+        &__decor {
+            font-size: 30px;
+        }
+        &__info {
+            font-size: 16px;
+            width: 400px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .order {    
+        &__container {
+            &-text {
+                gap: 10px;
+            }
+        }
+        &__decor {
+            font-size: 28px;
+            width: 300px;
+        }
+        &__info {
+            font-size: 16px;
+            width: 300px;
+        }
+    }
+}
